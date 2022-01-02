@@ -38,9 +38,21 @@ while game_is_on:
         ball.bounce_x()
 
     # cause ball to respawn and add score after it hit either end of screen
-    if ball.xcor() > 360 or ball.xcor() < -360:
+    if ball.xcor() > 360:
         scoreboard.update_left()
         ball.respawn()
+
+    if ball.xcor() < -360:
+        scoreboard.update_right()
+        ball.respawn()
+
+    if scoreboard.get_l_score() == 5:
+        scoreboard.game_over1()
+        game_is_on = False
+
+    if scoreboard.get_r_score() == 5:
+        game_is_on = False
+        scoreboard.game_over2()
 
 
 

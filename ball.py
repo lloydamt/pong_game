@@ -1,4 +1,5 @@
 from turtle import Turtle
+import time
 
 class Ball(Turtle):
     def __init__(self):
@@ -17,6 +18,7 @@ class Ball(Turtle):
 
     def bounce_x(self):
         self.x_move *= -1
+        self.speed *= 0.8
 
     def bounce_y(self):
         self.y_move *= -1
@@ -24,4 +26,5 @@ class Ball(Turtle):
     def respawn(self):
         self.bounce_x()
         self.goto(0, 0)
+        self.speed = 0.1
 

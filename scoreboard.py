@@ -12,9 +12,9 @@ class Scoreboard(Turtle):
 
     def display_score(self):
         self.goto(100, 230)
-        self.write(f"P2: {self.r_score}", align="center", font=('Arial', 35, 'normal'))
+        self.write(f"P2: {self.r_score}", align="center", font=('Arial', 30, 'normal'))
         self.goto(-50, 230)
-        self.write(f"P1: {self.l_score}", align="center", font=('Arial', 35, 'normal'))
+        self.write(f"P1: {self.l_score}", align="center", font=('Arial', 30, 'normal'))
 
     def update_right(self):
         self.r_score += 1
